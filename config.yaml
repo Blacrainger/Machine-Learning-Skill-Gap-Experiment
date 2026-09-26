@@ -1,0 +1,62 @@
+random_seed: 42
+n_employees: 1000
+employees_per_role: 200
+roles:
+  - Registry / Records Administration
+  - Human Resources Administration
+  - Finance / Accounts Administration
+  - Admissions Administration
+  - Departmental / Academic Administration
+competencies:
+  - {code: C1, name: ICT Proficiency & Digital Productivity}
+  - {code: C2, name: Information Literacy}
+  - {code: C3, name: Data Literacy & Analysis}
+  - {code: C4, name: Digital Communication & Collaboration}
+  - {code: C5, name: Digital Content & Document Creation}
+  - {code: C6, name: Digital Safety, Privacy & Security}
+  - {code: C7, name: Digital Problem Solving}
+  - {code: C8, name: Digital Administrative Systems Use}
+competency_definitions:
+  C1: {definition: Use common ICT tools and digital productivity software to complete administrative work., framework_basis: DigComp 2.2 information and data literacy; Jisc digital capabilities, notes: Operational competency mapping.}
+  C2: {definition: Find, evaluate, organise and manage digital information and records., framework_basis: DigComp 2.2 information and data literacy, notes: Includes records-oriented information handling.}
+  C3: {definition: Interpret, manage and use data and digital tools for routine administrative analysis., framework_basis: DigComp 2.2 information and data literacy; Jisc digital capabilities, notes: Role-focused operational competency.}
+  C4: {definition: Communicate and collaborate effectively through digital channels and platforms., framework_basis: DigComp 2.2 communication and collaboration, notes: Includes appropriate digital workplace interaction.}
+  C5: {definition: Create, format and maintain digital documents and other administrative content., framework_basis: DigComp 2.2 digital content creation, notes: Operational administrative scope.}
+  C6: {definition: Protect accounts, information, privacy and devices while using digital services., framework_basis: DigComp 2.2 safety, notes: Includes responsible handling of sensitive administrative data.}
+  C7: {definition: Identify and resolve routine digital problems and adapt to unfamiliar tools., framework_basis: DigComp 2.2 problem solving, notes: Operational competency mapping.}
+  C8: {definition: Use role-relevant digital administrative systems such as records, HR, finance or admissions platforms., framework_basis: Jisc professional-services digital capabilities context, notes: Operational competency derived from professional-services context; not an official eighth DigComp domain.}
+proficiency_scale:
+  1: Basic Awareness
+  2: Developing
+  3: Functional
+  4: Proficient
+  5: Advanced
+proficiency_interpretations:
+  1: Very limited ability to perform simple digital tasks and usually requires substantial assistance.
+  2: Can perform basic digital tasks but may require occasional assistance.
+  3: Can independently perform routine role-related digital tasks.
+  4: Can effectively perform more complex routine work and solve common digital problems.
+  5: Can perform complex digital tasks, optimise processes, adapt to new tools, and support others.
+role_requirements:
+  Registry / Records Administration: [4, 5, 4, 4, 4, 5, 4, 5]
+  Human Resources Administration: [4, 5, 4, 5, 4, 5, 4, 5]
+  Finance / Accounts Administration: [4, 4, 5, 4, 4, 5, 4, 5]
+  Admissions Administration: [4, 5, 4, 5, 4, 5, 4, 5]
+  Departmental / Academic Administration: [4, 4, 4, 5, 4, 4, 4, 5]
+generation_means:
+  Registry / Records Administration: [3.4, 3.7, 3.3, 3.5, 3.4, 3.6, 3.2, 3.5]
+  Human Resources Administration: [3.4, 3.7, 3.3, 3.7, 3.4, 3.7, 3.2, 3.5]
+  Finance / Accounts Administration: [3.5, 3.5, 3.8, 3.4, 3.4, 3.7, 3.3, 3.6]
+  Admissions Administration: [3.4, 3.7, 3.3, 3.7, 3.5, 3.6, 3.2, 3.5]
+  Departmental / Academic Administration: [3.4, 3.5, 3.4, 3.7, 3.5, 3.5, 3.3, 3.5]
+gap_thresholds: {low_upper_exclusive: 25, moderate_upper_exclusive: 50}
+train_test_ratio: 0.2
+cv_folds: 5
+correlation_strength: 0.50
+latent_factor_sd: 1.50
+individual_noise_sd: 1.20
+model_parameters:
+  logistic_regression: {max_iter: 2000, class_weight: balanced}
+  decision_tree: {max_depth: 6, min_samples_leaf: 4, class_weight: balanced}
+  random_forest: {n_estimators: 300, max_depth: 10, min_samples_leaf: 3, class_weight: balanced, n_jobs: 1}
+  gradient_boosting: {n_estimators: 120, learning_rate: 0.05, max_depth: 2, subsample: 0.85}
