@@ -244,6 +244,4 @@ The fixed-seed run regenerates the raw profiles, processed skill-gap dataset, re
 
 The reported test metrics above are reproduced from the checked-in configuration and experiment pipeline; the underlying result files are the generated record of the run.
 =======
-# Machine-Learning-Skill-Gap-Experiment
-The experiment investigates the feasibility of using machine-learning classification models to identify role-specific digital skill-gap categories among higher education administrative staff.
->>>>>>> af06a4ed69c521b9150b808f26539fd7f923814e
+
